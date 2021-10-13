@@ -21,9 +21,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var textViewClassDes: TextView
     private lateinit var textViewClassContent: TextView
     private var stop:Boolean = false
-    private val STORAGE_PERMISSION_CODE : Int = 1000
     var mediaPlayer: MediaPlayer? = null
-    var downloadID : Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
