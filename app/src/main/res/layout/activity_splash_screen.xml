@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@mipmap/ic_meditation_foreground"
+        android:src="@mipmap/meditation_logo_round"
         android:layout_centerInParent="true"
         android:id="@+id/logo"/>
 
