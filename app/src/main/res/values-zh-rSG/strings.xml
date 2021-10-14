@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediHealth</string>
+    <string name="view_content">查看内容</string>
+    <string name="class_name">班级名称</string>
+    <string name="description">描述</string>
+    <string name="stop_audio_file">停止音频文件</string>
+    <string name="play_audio_file">" 播放音频文件"</string>
+    <string name="build_number">" 建造编号"</string>
+    <string name="build_version">构建版本</string>
+    <string name="all_rights_reserved">版权所有</string>
+    <string name="setting_info">设置信息</string>
+    <string name="class_info">班级信息</string>
+</resources>

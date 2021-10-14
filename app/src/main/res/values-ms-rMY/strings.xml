@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediHealth</string>
+    <string name="view_content">Melihat Kandungan</string>
+    <string name="class_name">Nama Kelas</string>
+    <string name="description">Penerangan</string>
+    <string name="stop_audio_file">Hentikan fail audio</string>
+    <string name="play_audio_file">Mainkan fail audio</string>
+    <string name="build_number">Membina nombor</string>
+    <string name="build_version">Versi binaan</string>
+    <string name="all_rights_reserved">Hak cipta terpelihara</string>
+    <string name="setting_info">menetapkan maklumat</string>
+    <string name="class_info">" maklumat kelas"</string>
+</resources>
