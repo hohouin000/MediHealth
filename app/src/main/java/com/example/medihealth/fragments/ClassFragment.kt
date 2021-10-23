@@ -1,6 +1,5 @@
 package com.example.medihealth.fragments
 
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -14,6 +13,8 @@ import com.example.medihealth.R
 import com.google.firebase.firestore.*
 import com.google.firebase.firestore.EventListener
 import kotlin.collections.ArrayList
+import androidx.appcompat.widget.SearchView;
+import java.util.*
 
 class ClassFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
@@ -34,13 +35,59 @@ class ClassFragment : Fragment() {
         classArrayList = arrayListOf()
         tempArraylist = arrayListOf()
         eventChangeListener()
-        classAdapter = ClassAdapter(requireContext(), classArrayList)
+        this.setHasOptionsMenu(true)
+        classAdapter = ClassAdapter(requireContext(), tempArraylist)
 
         recyclerView.adapter = classAdapter
 
         return view
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.search,menu)
+        val item = menu?.findItem(R.id.search_action)
+        val searchView = item?.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(newText: String?): Boolean {
+                tempArraylist.clear()
+                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                if (searchText.isNotEmpty()){
+                    classArrayList.forEach{
+                        if (it.class_name.toString().toLowerCase(Locale.getDefault()).contains(searchText)){
+                            tempArraylist.add(it)
+                        }
+                    }
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }else{
+                    tempArraylist.clear()
+                    tempArraylist.addAll(classArrayList)
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                tempArraylist.clear()
+                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                if (searchText.isNotEmpty()){
+                    classArrayList.forEach{
+                        if (it.class_name.toString().toLowerCase(Locale.getDefault()).contains(searchText)){
+                            tempArraylist.add(it)
+                        }
+                    }
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }else{
+                    tempArraylist.clear()
+                    tempArraylist.addAll(classArrayList)
+                    recyclerView.adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+
+
+        })
+        return super.onCreateOptionsMenu(menu,inflater)
+    }
 
     private fun eventChangeListener() {
         db = FirebaseFirestore.getInstance()

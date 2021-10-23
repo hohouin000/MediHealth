@@ -1,8 +1,6 @@
 package com.example.medihealth
 
-import android.app.DownloadManager
-import android.content.Context
-import android.content.pm.PackageManager
+
 import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +8,6 @@ import android.view.View
 import android.widget.*
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_detail.*
-import android.Manifest
 import android.os.*
 
 
