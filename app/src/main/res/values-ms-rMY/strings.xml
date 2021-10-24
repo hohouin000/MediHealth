@@ -10,5 +10,5 @@
     <string name="build_version">Versi binaan</string>
     <string name="all_rights_reserved">Hak cipta terpelihara</string>
     <string name="setting_info">menetapkan maklumat</string>
-    <string name="class_info">" maklumat kelas"</string>
+    <string name="class_list">" maklumat kelas"</string>
 </resources>

@@ -27,13 +27,10 @@ class DetailActivity : AppCompatActivity() {
         val btnPlay: Button = findViewById(R.id.btnPlay)
         val btnStop: Button = findViewById(R.id.btnStop)
 
-
-
         imageViewClass = findViewById(R.id.imageViewClassImage)
         textViewClassName = findViewById(R.id.textViewClassName)
         textViewClassDes = findViewById(R.id.textViewClassDescription)
         textViewClassContent = findViewById(R.id.textViewClassContent)
-
 
         val classImage = intent.getStringExtra("class_image")
         val className = intent.getStringExtra("class_name")
